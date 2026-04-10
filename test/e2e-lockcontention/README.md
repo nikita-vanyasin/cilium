@@ -103,7 +103,6 @@ On a production cluster (Cilium 1.14.19, 800+ endpoints, 2379 CNPs):
   (see branch `nv/selectorcache-write-lock-contention-reproducer`, `pkg/policy/lock_contention_test.go`)
 - **The fix exists**: PR [#34205](https://github.com/cilium/cilium/pull/34205) (Cilium 1.16) changes
   `ConsumeMapChanges` from `mutex.Lock()` to `mutex.RLock()`
-- **1.16.0 heap profile shows zero `AccumulateMapChanges` allocations** (tested on Kind)
 
 ### What is NOT confirmed
 
